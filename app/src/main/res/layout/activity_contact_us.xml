@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#f5f5f5"
+        tools:context=".ui.activities.settings.ContactUsActivity">
+    <include
+            layout="@layout/toolbar_normal"
+            />
+<androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_large"
+        tools:ignore="MissingConstraints">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/contact_ways"
+                android:fontFamily="@font/jf_flat_bold"
+                android:textColor="@color/colorAccent"
+                android:layout_margin="@dimen/margin_normal"
+                android:textSize="@dimen/textsize1"
+                />
+
+        <LinearLayout
+                android:id="@+id/mail_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_normal"
+
+                >
+            <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/mail_contact"
+                    android:tint="@color/colorAccent"
+                    />
+        <TextView
+                android:id="@+id/mail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_normal"
+
+                android:layout_gravity="center"
+                android:gravity="center_vertical|left"
+
+                />
+
+        </LinearLayout>
+        <LinearLayout
+                android:id="@+id/phone_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_normal"
+                >
+            <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:tint="@color/colorAccent"
+                    android:src="@drawable/phone_call_contact"
+                    />
+            <TextView
+                    android:id="@+id/phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/margin_normal"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:layout_gravity="center"
+
+                    android:gravity="center_vertical|left"
+
+                    />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_large"
+            app:cardCornerRadius="@dimen/margin_normal"
+            tools:ignore="MissingConstraints">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+          <EditText
+                  android:id="@+id/etContact"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:inputType="textMultiLine"
+                  android:lines="12"
+                  android:gravity="top"
+                  android:fontFamily="@font/jf_flat_semi"
+                  android:textSize="@dimen/textsize2"
+                  android:hint="@string/contact_us_by_message"
+                  android:backgroundTint="@android:color/white"
+                  />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/send_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:layout_marginLeft="@dimen/margin_2xlarge"
+        android:layout_marginRight="@dimen/margin_2xlarge"
+        app:cornerRadius="@dimen/margin_normal"
+        android:text="@string/send"
+        android:fontFamily="@font/jf_flat_semi"
+        android:textStyle="bold"
+        android:textColor="@color/main_text_color"
+        />
+</LinearLayout>

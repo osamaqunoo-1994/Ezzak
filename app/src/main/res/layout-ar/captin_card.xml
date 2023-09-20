@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        >
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            >
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_captin"
+
+                android:layout_width="@dimen/avatar_img"
+                android:layout_height="@dimen/avatar_img"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:elevation="2dp"
+                android:transitionName="img"
+                android:layout_marginBottom="-24dp"
+                android:layout_marginTop="@dimen/margin_normal"
+                />
+
+        <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_large"
+                android:layout_marginLeft="@dimen/margin_large"
+                android:elevation="1dp"
+
+
+                >
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_xlarge"
+                        android:padding="@dimen/padding_med"
+                        >
+
+                    <TextView
+                            android:id="@+id/name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_marginRight="@dimen/margin_normal"
+                            android:layout_marginLeft="@dimen/margin_normal"
+                            android:fontFamily="@font/jf_flat_semi"
+                            />
+
+                    <ImageView
+                            android:id="@+id/iv_call"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/phone_menu"
+                            android:layout_marginTop="@dimen/margin_small"
+                            />
+                </LinearLayout>
+
+
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/captin_rate"
+                        android:textColor="@color/colorPrimary"
+                        android:gravity="center"
+                        android:fontFamily="@font/jf_flat_bold"
+                        android:layout_margin="@dimen/margin_normal"
+                        />
+                <androidx.appcompat.widget.AppCompatRatingBar
+                        android:id="@+id/rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        android:progressTint="@color/colorStar"
+
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+
+                        />
+                <TextView
+                        android:id="@+id/period"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="6 mins"
+                        android:gravity="center"
+                        android:layout_margin="@dimen/margin_normal"
+                        android:fontFamily="@font/jf_flat_semi"
+                        />
+
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_normal"
+                        android:layout_marginLeft="@dimen/margin_normal"
+                        android:layout_marginTop="@dimen/margin_normal"
+                        android:layout_marginBottom="@dimen/margin_large"
+
+                        >
+                    <TextView
+                            android:id="@+id/car_model"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/jf_flat_bold"
+                            android:textColor="@color/colorAccent"
+                            android:text="toyota"
+                            android:padding="@dimen/padding_med"
+                            android:layout_alignParentRight="true"
+                            />
+                    <TextView
+                            android:id="@+id/car_plate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/jf_flat_bold"
+                            android:textColor="@color/colorAccent"
+                            android:text="23ksa"
+                            android:padding="@dimen/padding_med"
+                            android:layout_alignParentLeft="true"
+                            />
+                </RelativeLayout>
+                <LinearLayout
+                        android:id="@+id/call_lay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:layout_gravity="center"
+                        android:visibility="gone"
+                        android:padding="@dimen/padding_med"
+                        >
+                    <TextView
+                        android:id="@+id/phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/call_captin"
+                        android:gravity="center"
+                        android:layout_marginRight="@dimen/margin_small"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:fontFamily="@font/jf_flat_semi"
+
+                        />
+                    <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/phone_menu"
+                            android:layout_marginTop="@dimen/margin_small"
+                            />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</LinearLayout>

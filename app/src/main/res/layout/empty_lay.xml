@@ -1,0 +1,25 @@
+<LinearLayout android:id="@+id/empty_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/search_about"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_large"
+            />
+    <TextView
+            android:id="@+id/no_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_bids_available"
+            android:layout_gravity="center"
+            android:fontFamily="@font/jf_flat_semi"
+            android:gravity="center"
+            android:textColor="@android:color/holo_red_dark"
+            android:layout_marginLeft="@dimen/margin_xlarge"
+
+            />
+</LinearLayout>

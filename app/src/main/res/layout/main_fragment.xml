@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+>
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            >
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="6dp"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp">
+
+                <com.smarteist.autoimageslider.SliderView
+                        android:id="@+id/sliderView_"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:sliderAutoCycleDirection="back_and_forth"
+                        app:sliderAutoCycleEnabled="true"
+                        app:sliderCircularHandlerEnabled="true"
+                        app:sliderIndicatorGravity="center_horizontal|bottom"
+                        app:sliderIndicatorMargin="15dp"
+                        app:sliderIndicatorOrientation="horizontal"
+                        app:sliderIndicatorPadding="3dp"
+                        app:sliderIndicatorRadius="2dp"
+                        app:sliderIndicatorSelectedColor="#5A5A5A"
+                        app:sliderIndicatorUnselectedColor="#FFF"
+                        app:sliderScrollTimeInSec="2"
+                        app:sliderStartAutoCycle="true" />
+
+            </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_weight="3"
+
+            android:gravity="top|center_horizontal"
+    >
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:padding="@dimen/padding_med"
+
+                        android:layout_marginBottom="@dimen/margin_large"
+                      android:orientation="horizontal"
+                      android:background="@drawable/item_bg"
+        >
+            <TextView
+                      android:id="@+id/outdoors"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="1"
+                      android:text="@string/out_doors"
+                      android:textSize="@dimen/textsize1"
+                      android:fontFamily="@font/jf_flat_bold"
+                      android:gravity="center"
+                    android:textColor="@android:color/black"
+                    android:padding="@dimen/padding_ab_med"
+            />
+            <TextView
+                    android:id="@+id/indoors"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/indoors"
+                    android:textSize="@dimen/textsize1"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/jf_flat_bold"
+                    android:gravity="center"
+                    android:padding="@dimen/padding_ab_med"
+            />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_large"
+                      android:layout_marginRight="@dimen/margin_normal"
+                      android:layout_marginLeft="@dimen/margin_normal"
+                      android:layout_marginBottom="@dimen/margin_large"
+
+        >
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_weight="1"
+                          android:layout_marginLeft="@dimen/margin_normal"
+                          android:layout_marginRight="@dimen/margin_normal"
+                          android:background="@drawable/bg_choose"
+            >
+                <LinearLayout
+                        android:id="@+id/members"
+                        android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                        android:padding="@dimen/padding_ab_med"
+                        android:background="@drawable/item_select"
+
+
+                        >
+                    <ImageView android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                                android:src="@mipmap/ride"
+                               android:layout_gravity="center"
+
+                    />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/trip"
+                            android:fontFamily="@font/jf_flat_bold"
+                            android:textColor="@android:color/black"
+                            android:layout_gravity="center"
+                    />
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_weight="1"
+                          android:layout_marginLeft="@dimen/margin_normal"
+                          android:layout_marginRight="@dimen/margin_normal"
+                          android:background="@drawable/bg_choose"
+            >
+                <LinearLayout
+                        android:id="@+id/package_"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_ab_med"
+                        android:background="@drawable/item_select"
+
+                >
+                    <ImageView android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:src="@mipmap/box_ezzak"
+                               android:layout_gravity="center"
+
+                    />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/package_"
+                            android:fontFamily="@font/jf_flat_bold"
+                            android:textColor="@android:color/black"
+                            android:layout_gravity="center"
+                    />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

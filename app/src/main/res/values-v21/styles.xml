@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar" tools:ignore="DuplicateDefinition">
+
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textViewStyle">@style/cairo_textView_style</item>
+        <item name="android:editTextStyle">@style/cairo_edit_style</item>
+        <item name="materialButtonStyle">@style/cairo_btn_style</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+
+        <item name="android:forceDarkAllowed">false</item>
+
+    </style>
+
+</resources>

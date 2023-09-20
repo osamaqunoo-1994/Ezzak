@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.activities.notifications.BillActivity">
+<include
+        layout="@layout/toolbar_normal"
+        />
+    <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@mipmap/bill"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/margin_xlarge"
+            />
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cost_ride"
+            android:layout_gravity="center_horizontal"
+
+            android:fontFamily="@font/jf_flat_bold"
+            />
+    <TextView
+            android:id="@+id/totally"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center_horizontal"
+            android:textColor="@android:color/holo_red_dark"
+            android:fontFamily="@font/jf_flat_semi"
+            android:layout_margin="@dimen/margin_normal"
+            />
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pay_msg"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_large"
+            android:fontFamily="@font/jf_flat_bold"
+            />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/rate_captin_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rate_captin"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_large"
+        android:fontFamily="@font/jf_flat_bold"
+        app:cornerRadius="@dimen/margin_large"
+        android:textColor="@color/main_text_color"
+        />
+
+</LinearLayout>

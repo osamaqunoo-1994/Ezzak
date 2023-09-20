@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aait.getak.utils.FullNavigation xmlns:android="http://schemas.android.com/apk/res/android"
+                                           xmlns:app="http://schemas.android.com/apk/res-auto"
+                                           xmlns:tools="http://schemas.android.com/tools"
+                                           android:id="@+id/drawer_layout"
+                                           android:layout_width="match_parent"
+                                           android:layout_height="match_parent"
+                                           tools:context=".ui.activities.core.MainActivity">
+    <RelativeLayout
+            android:id="@+id/content"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <include
+                android:id="@+id/main"
+                layout="@layout/toolbar_main"
+        />
+
+
+        <FrameLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/main"
+                android:layout_above="@+id/navigation"
+        />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:itemTextColor="@android:color/black"
+                android:layout_alignParentBottom="true"
+                app:itemBackground="@android:color/white"
+                android:foreground="?attr/selectableItemBackground"
+                app:labelVisibilityMode="labeled"
+                app:itemIconTint="@null"
+                app:menu="@menu/nav_menu" />
+    </RelativeLayout>
+    <FrameLayout
+            android:id="@+id/nav_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="left" />
+
+</com.aait.getak.utils.FullNavigation>

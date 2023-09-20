@@ -1,0 +1,6 @@
+{
+  "merchantKey":"0cefb3ef17079da8ef3fcb44c180af18cfa4bb8e4753ba3e37a0311273898a8e",
+  "terminalId":  "tawsela",
+  "terminalPass": "tawsela@urway121",
+  "requestUrl":"https://payments.urway-tech.com/URWAYPGService/transaction/jsonProcess/JSONrequest"
+  }

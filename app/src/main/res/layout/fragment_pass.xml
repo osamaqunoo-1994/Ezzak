@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myCoordinatorLayout"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:layout_editor_absoluteX="-54dp"
+        tools:layout_editor_absoluteY="-113dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_2xlarge"
+                android:background="@android:color/white">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:src="@mipmap/logo" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_2xlarge"
+                android:orientation="vertical"
+
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:layout_marginRight="@dimen/margin_large"
+                    android:fontFamily="@font/jf_flat_bold"
+                    android:gravity="center"
+                    android:text="@string/enter_pass_msg"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/textsize1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:layout_marginRight="@dimen/margin_large"
+                    android:fontFamily="@font/jf_flat_semi"
+                    android:text="@string/pass_msg"
+
+                    />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Design.TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:layout_marginRight="@dimen/margin_large"
+                    android:layout_marginBottom="@dimen/margin_normal"
+                    app:passwordToggleContentDescription="show"
+                    app:hintAnimationEnabled="false"
+                    app:hintEnabled="false"
+                    app:passwordToggleEnabled="true"
+                    app:boxBackgroundMode="none"
+                    >
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/jf_flat_semi"
+                        android:gravity="left|center_vertical"
+                        android:inputType="textPassword"
+                        android:background="@drawable/shape_rect"
+                        android:padding="@dimen/padding_ab_med"
+                        android:textSize="@dimen/textsize2"
+                        android:hint="@string/password"
+                        tools:ignore="MissingConstraints" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/error_txt_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_large"
+                android:layout_marginRight="@dimen/margin_large"
+                android:drawableEnd="@android:drawable/stat_notify_error"
+                android:drawableTint="@android:color/holo_red_dark"
+                android:textColor="@android:color/holo_red_dark"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/forget_pass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_large"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/margin_large"
+                android:layout_marginRight="@dimen/margin_large"
+                android:padding="@dimen/padding_med"
+                android:text="@string/forgot_password" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:padding="@dimen/padding_med"
+                android:visibility="gone"
+
+                >
+
+                <TextView
+                    android:id="@+id/have_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/padding_med"
+                    android:paddingTop="@dimen/padding_med"
+                    android:text="@string/dont_have_account" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_med"
+                    android:text="@string/register"
+                    android:textColor="@color/colorAccent" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+        <TextView
+            android:id="@+id/invitation_code_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:text="@string/have_invation"
+            android:layout_marginRight="@dimen/margin_large"
+            android:textColor="@color/colorAccent"
+            android:paddingTop="@dimen/padding_med"
+            android:paddingBottom="@dimen/padding_med"
+            android:layout_marginBottom="@dimen/margin_normal"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/continue_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_large"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_large"
+            android:fontFamily="@font/jf_flat_semi"
+            android:text="@string/cont"
+            android:textColor="@color/main_text_color"
+            />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

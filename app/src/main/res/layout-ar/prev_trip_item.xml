@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical" android:layout_width="match_parent"
+              android:layout_margin="@dimen/margin_normal"
+              app:cardBackgroundColor="@android:color/white"
+        android:layout_height="wrap_content">
+    <LinearLayout android:layout_width="match_parent"
+                  android:orientation="vertical"
+                  android:layout_height="wrap_content"
+                  android:paddingRight="@dimen/padding_med"
+                  android:paddingBottom="@dimen/padding_med"
+                  android:paddingTop="@dimen/padding_med"
+
+
+    >
+        <RelativeLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_normal"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginBottom="@dimen/margin_normal"
+
+            >
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentLeft="true"
+
+                android:layout_marginRight="@dimen/margin_small"
+                android:layout_marginLeft="@dimen/margin_small"
+                />
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jf_flat_semi"
+                android:layout_marginRight="@dimen/margin_small"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_alignParentRight="true"
+                />
+
+        </RelativeLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                      android:layout_weight="0.01"
+        >
+<LinearLayout android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+    <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/add_location_map"
+            android:layout_marginRight="@dimen/margin_normal"
+            android:layout_marginLeft="@dimen/margin_small"
+
+            />
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/from"
+            android:fontFamily="@font/jf_flat_semi"
+    />
+</LinearLayout>
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:src="@mipmap/from_to"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:layout_marginRight="@dimen/margin_normal"
+
+
+            />
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                <LinearLayout android:layout_width="wrap_content"
+                              android:layout_height="match_parent"
+                              android:layout_gravity="center"
+                >
+
+
+                    <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/add_location_map"
+                            android:layout_marginRight="@dimen/margin_normal"
+                            android:layout_marginLeft="@dimen/margin_small"
+
+
+
+                    />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/jf_flat_semi"
+                            android:text="@string/to"
+
+                    />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="0dp"
+                                                           android:layout_height="match_parent"
+                                                           android:orientation="vertical"
+                                                           android:layout_weight="1"
+        >
+
+            <TextView
+                    android:id="@+id/from_loc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/jf_flat_bold"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:textColor="@color/colorAccent"
+                    android:gravity="center"
+                    tools:ignore="MissingConstraints"/>
+            <View android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  app:layout_constraintTop_toTopOf="parent"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  android:background="@android:color/darker_gray"
+            />
+            <TextView
+                    android:id="@+id/to_loc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:fontFamily="@font/jf_flat_bold"
+                    android:textColor="@color/colorAccent"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:gravity="center"
+            />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

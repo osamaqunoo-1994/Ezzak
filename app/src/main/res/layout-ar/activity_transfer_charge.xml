@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.activities.menu.TransferChargeActivity">
+<include
+        layout="@layout/toolbar_normal"
+        />
+<TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_value_charge"
+        android:gravity="center"
+        android:fontFamily="@font/jf_flat_bold"
+        android:layout_marginTop="@dimen/margin_2xlarge"
+        android:layout_marginBottom="@dimen/margin_normal"
+        />
+
+    <TextView
+            android:id="@+id/my_charge_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_charge"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_marginRight="@dimen/margin_xlarge"
+            android:layout_marginLeft="@dimen/margin_xlarge"
+            android:padding="@dimen/padding_med"
+            android:gravity="center"
+            />
+
+    <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_large"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/margin_normal"
+            >
+
+        <LinearLayout android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/margin_2xlarge"
+                android:layout_gravity="center"
+
+                >
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/jf_flat_semi"
+                    android:textSize="@dimen/textsize2"
+                    android:gravity="center"
+                    android:layout_gravity="left"
+                    android:inputType="numberDecimal"
+                    android:backgroundTint="@android:color/transparent"
+                    android:hint="@string/charge_value"
+                    android:layout_weight="1"
+
+                    />
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                    android:id="@+id/atv_codes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/padding_med"
+                    android:backgroundTint="@android:color/transparent"
+                    android:textSize="@dimen/textsize2"
+                    android:cursorVisible="false"
+                    android:maxLines="1"
+                    android:gravity="center"
+                    android:minWidth="70dp"
+                    android:drawablePadding="@dimen/margin_small"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:editable="false"
+                    android:textEditSuggestionItemLayout="@null"
+                    android:drawableEnd="@drawable/arrow"
+                    android:fontFamily="@font/jf_flat_semi"
+                    />
+
+        </LinearLayout>
+        <View android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                />
+
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom|center"
+            >
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/continue_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="@string/cont"
+            android:fontFamily="@font/jf_flat_semi"
+            android:textStyle="bold"
+            app:cornerRadius="20dp"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginLeft="@dimen/margin_2xlarge"
+            android:layout_marginRight="@dimen/margin_2xlarge"
+            android:layout_marginBottom="@dimen/margin_normal"
+        android:textColor="@color/main_text_color"
+
+            />
+    </LinearLayout>
+</LinearLayout>

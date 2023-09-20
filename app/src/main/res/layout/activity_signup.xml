@@ -1,0 +1,799 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.activities.auth.SignUpActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="15dp">
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+              <ImageView
+                  android:id="@+id/back"
+                  android:layout_width="40dp"
+                  android:padding="7dp"
+                  app:tint="@color/white"
+                  android:src="@drawable/arrow_back"
+                  android:layout_height="40dp"/>
+          </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/logo" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="@string/reg_title"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/higher_margin"
+                android:text="@string/number_phone"
+                android:textColor="@color/colorPrimaryDark"
+
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+            <LinearLayout
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+
+                android:id="@+id/step_1"
+
+
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/reg_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_normal"
+                    android:background="@drawable/et_sign"
+                    android:hint="@string/reg_name"
+
+
+                    android:inputType="text"
+                    android:padding="@dimen/padding_med" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="3">
+
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/ccp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/low_margin"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_white_background"
+                        android:gravity="center_horizontal"
+                        app:ccp_defaultNameCode="SA"
+                        app:ccp_showFlag="true"
+                        app:ccp_showNameCode="false"
+                        app:ccp_showPhoneCode="true"
+                        app:ccp_textGravity="RIGHT"
+                        app:ccp_textSize="@dimen/text_medium" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:text="@string/password"
+
+                    android:textColor="@color/colorPrimaryDark"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:background="@drawable/et_sign"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:textDirection="ltr"
+                    android:layoutDirection="ltr"
+                    android:layout_marginBottom="@dimen/margin_normal"
+
+
+                    android:layout_height="wrap_content">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="00966"
+                        android:layout_marginEnd="5dp"
+                        android:visibility="visible"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"/>
+                    <LinearLayout
+                        android:layout_width="1dp"
+                        android:background="#ccc"
+                        android:visibility="visible"
+
+                        android:layout_height="match_parent"/>
+                    <EditText
+                        android:id="@+id/reg_mobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:gravity="center"
+
+                        android:background="@drawable/et_sign"
+                        android:hint="@string/reg_mobile"
+                        android:inputType="number"
+                        android:padding="@dimen/padding_med" />
+
+                </LinearLayout>
+
+
+
+                <EditText
+                    android:id="@+id/reg_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+
+                    android:layout_marginBottom="@dimen/margin_normal"
+                    android:background="@drawable/et_sign"
+                    android:hint="@string/reg_id"
+                    android:inputType="number"
+                    android:padding="@dimen/padding_med" />
+
+                <LinearLayout
+
+
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+
+                    android:layout_marginBottom="@dimen/margin_normal"
+                    android:background="@drawable/et_sign"
+                    android:hint="@string/reg_id"
+                    android:gravity="center_vertical"
+                    android:inputType="number"
+                    android:padding="@dimen/padding_med">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:background="@drawable/et_sign"
+                        android:hint="@string/reg_male"
+                        android:inputType="text"
+                        android:padding="@dimen/padding_med" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:textStyle="bold"
+                        android:textSize="13dp"
+                        android:checked="true"
+                        android:text="@string/reg_gender_male"
+                        android:layout_marginEnd="15dp"
+                        android:layout_height="wrap_content"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:textStyle="bold"
+                        android:textSize="13dp"
+                        android:text="@string/reg_gender_famel"
+                        android:layout_marginEnd="15dp"
+                        android:layout_height="wrap_content"/>
+
+                </RadioGroup>
+
+
+
+
+
+                </LinearLayout>
+
+
+
+
+                <EditText
+                    android:id="@+id/reg_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+
+                    android:layout_marginBottom="@dimen/margin_normal"
+                    android:background="@drawable/et_sign"
+                    android:hint="@string/reg_email"
+                    android:inputType="textEmailAddress"
+                    android:padding="@dimen/padding_med" />
+
+                <TextView
+                    android:id="@+id/reg_date_of_birth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+
+                    android:layout_marginBottom="@dimen/margin_normal"
+                    android:background="@drawable/et_sign"
+                    android:hint="@string/reg_date_of_birth"
+                    android:inputType="text"
+                    android:padding="@dimen/padding_med" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+
+                    android:layout_marginBottom="@dimen/margin_normal"
+                    android:background="@drawable/et_sign"
+                    android:inputType="text"
+                    android:padding="@dimen/padding_med" >
+                    <Spinner
+                        android:id="@+id/reg_area"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/reg_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+
+                    android:layout_marginBottom="@dimen/margin_normal"
+                    android:background="@drawable/et_sign"
+                    android:hint="@string/reg_code"
+                    android:inputType="text"
+                    android:padding="@dimen/padding_med" />
+
+                <EditText
+                    android:id="@+id/reg_code2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+
+                    android:layout_marginBottom="@dimen/margin_normal"
+                    android:background="@drawable/et_sign"
+                    android:hint="@string/reg_code2"
+                    android:inputType="text"
+                    android:padding="@dimen/padding_med" />
+
+                <TextView
+                    android:id="@+id/butt_forgetPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:padding="@dimen/padding_med"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_large"
+
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/NEXdt_1"
+                    style="@style/greenButton"
+                    android:layout_marginTop="@dimen/higher_margin"
+                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    android:shadowColor="@color/colorGray"
+                    android:text="@string/NEXdt" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/step_2"
+                android:orientation="vertical"
+                android:paddingTop="10dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="124dp"
+                            android:layout_height="124dp">
+
+                            <ImageView
+                                android:layout_width="124dp"
+                                android:layout_height="124dp"
+                                android:background="@drawable/back_about_us"
+                                android:padding="40dp"
+                                android:src="@drawable/icon_material_library_add1" />
+
+                            <ImageView
+                                android:id="@+id/image_1"
+                                android:layout_width="124dp"
+                                android:layout_height="124dp" />
+
+
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:id="@+id/txt_1"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="7dp"
+                            android:text="@string/image_1"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="13dp" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="124dp"
+                            android:layout_height="124dp">
+
+                            <ImageView
+                                android:layout_width="124dp"
+                                android:layout_height="124dp"
+                                android:background="@drawable/back_about_us"
+                                android:padding="40dp"
+                                android:src="@drawable/icon_material_library_add1" />
+
+                            <ImageView
+                                android:id="@+id/image_2"
+                                android:layout_width="124dp"
+                                android:layout_height="124dp" />
+
+
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="7dp"
+                            android:gravity="center"
+                            android:text="@string/image_2"
+                            android:textColor="@color/white"
+                            android:id="@+id/txt_2"
+
+                            android:textSize="13dp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="124dp"
+                            android:layout_height="124dp">
+
+                            <ImageView
+                                android:layout_width="124dp"
+                                android:layout_height="124dp"
+                                android:background="@drawable/back_about_us"
+                                android:padding="40dp"
+                                android:src="@drawable/icon_material_library_add1" />
+
+                            <ImageView
+                                android:id="@+id/image_3"
+                                android:layout_width="124dp"
+                                android:layout_height="124dp" />
+
+
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="7dp"
+                            android:text="@string/image_3"
+                            android:gravity="center"
+                            android:id="@+id/txt_3"
+
+                            android:textColor="@color/white"
+                            android:textSize="13dp" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="124dp"
+                            android:layout_height="124dp">
+
+                            <ImageView
+                                android:layout_width="124dp"
+                                android:layout_height="124dp"
+                                android:background="@drawable/back_about_us"
+                                android:padding="40dp"
+                                android:src="@drawable/icon_material_library_add1" />
+
+                            <ImageView
+                                android:id="@+id/image_4"
+                                android:layout_width="124dp"
+                                android:layout_height="124dp" />
+
+
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="7dp"
+                            android:id="@+id/txt_4"
+
+                            android:gravity="center"
+                            android:text="@string/image_4"
+                            android:textColor="@color/white"
+                            android:textSize="13dp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="124dp"
+                            android:layout_height="124dp">
+
+                            <ImageView
+                                android:layout_width="124dp"
+                                android:layout_height="124dp"
+                                android:background="@drawable/back_about_us"
+                                android:padding="40dp"
+                                android:src="@drawable/icon_material_library_add1" />
+
+                            <ImageView
+                                android:id="@+id/image_5"
+                                android:layout_width="124dp"
+                                android:layout_height="124dp" />
+
+
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="7dp"
+                            android:id="@+id/txt_5"
+
+                            android:gravity="center"
+                            android:text="@string/image_5"
+                            android:textColor="@color/white"
+                            android:textSize="13dp" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="124dp"
+                            android:layout_height="124dp">
+
+                            <ImageView
+                                android:layout_width="124dp"
+                                android:layout_height="124dp"
+                                android:background="@drawable/back_about_us"
+                                android:padding="40dp"
+                                android:src="@drawable/icon_material_library_add1" />
+
+                            <ImageView
+                                android:id="@+id/image_6"
+                                android:layout_width="124dp"
+                                android:layout_height="124dp" />
+
+
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="7dp"
+                            android:text="@string/image_6"
+                            android:gravity="center"
+                            android:id="@+id/txt_6"
+
+                            android:textColor="@color/white"
+                            android:textSize="13dp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/NEXdt_2"
+                    style="@style/greenButton"
+                    android:layout_marginTop="@dimen/higher_margin"
+                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    android:shadowColor="@color/colorGray"
+                    android:text="@string/NEXdt" />
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/step_3"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="124dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_height="124dp">
+
+                        <ImageView
+
+                            android:layout_width="124dp"
+                            android:layout_height="124dp"
+                            android:background="@drawable/back_about_us"
+                            android:padding="40dp"
+                            android:src="@drawable/icon_material_library_add1" />
+
+                        <ImageView
+                            android:id="@+id/image_7"
+                            android:layout_width="124dp"
+                            android:layout_height="124dp" />
+
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/txt_7"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="7dp"
+                        android:text="@string/image_7"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="13dp" />
+
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/reg_car_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_normal"
+                    android:background="@drawable/et_sign"
+                    android:hint="@string/reg_car_type"
+
+                    android:layout_marginTop="15dp"
+
+                    android:inputType="text"
+                    android:padding="@dimen/padding_med" />
+
+                <EditText
+                    android:id="@+id/reg_car_modal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_normal"
+                    android:background="@drawable/et_sign"
+                    android:hint="@string/reg_car_modal"
+                    android:layout_marginTop="5dp"
+
+
+                    android:inputType="text"
+                    android:padding="@dimen/padding_med" />
+                <EditText
+                    android:id="@+id/reg_car_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_normal"
+                    android:background="@drawable/et_sign"
+                    android:hint="@string/reg_car_color"
+
+                    android:layout_marginTop="5dp"
+
+                    android:inputType="text"
+                    android:padding="@dimen/padding_med" />
+
+                <EditText
+                    android:id="@+id/reg_car_years"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_normal"
+                    android:background="@drawable/et_sign"
+                    android:hint="@string/reg_car_years"
+
+                    android:layout_marginTop="5dp"
+
+                    android:inputType="text"
+                    android:padding="@dimen/padding_med" />
+                <EditText
+                    android:id="@+id/reg_car_bord_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_normal"
+                    android:background="@drawable/et_sign"
+                    android:hint="@string/reg_car_bord_number"
+                    android:layout_marginTop="5dp"
+
+
+                    android:inputType="text"
+                    android:padding="@dimen/padding_med" />
+
+                <EditText
+                    android:id="@+id/reg_car_alph_borde"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_normal"
+                    android:background="@drawable/et_sign"
+                    android:hint="@string/reg_car_alph_borde"
+                    android:layout_marginTop="5dp"
+
+
+                    android:inputType="text"
+                    android:padding="@dimen/padding_med" />
+                <EditText
+                    android:id="@+id/reg_car_number_bord"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_normal"
+                    android:background="@drawable/et_sign"
+                    android:hint="@string/reg_car_number_bord"
+
+                    android:layout_marginTop="5dp"
+
+                    android:inputType="text"
+                    android:padding="@dimen/padding_med" />
+
+                <EditText
+                    android:id="@+id/reg_car_type_bord"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_normal"
+                    android:background="@drawable/et_sign"
+                    android:hint="@string/reg_car_type_bord"
+
+                    android:layout_marginTop="5dp"
+
+                    android:inputType="text"
+                    android:padding="@dimen/padding_med" />
+
+
+
+                <Button
+                    android:id="@+id/NEXdt_3"
+                    style="@style/greenButton"
+                    android:layout_marginTop="@dimen/higher_margin"
+                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    android:shadowColor="@color/colorGray"
+                    android:text="@string/NEXdt" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

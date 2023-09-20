@@ -1,0 +1,44 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/shipingLay"
+        style="@style/Widget.Design.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginRight="@dimen/margin_large"
+        android:layout_marginBottom="@dimen/margin_normal"
+        app:passwordToggleContentDescription="show"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
+        app:boxBackgroundMode="none"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_charge_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jf_flat_semi"
+            android:inputType="numberDecimal"
+            android:textAlignment="viewStart"
+            android:background="@drawable/shape_rect"
+            android:padding="@dimen/padding_ab_med"
+            android:textSize="@dimen/textsize2"
+            android:hint="@string/enter_amount"
+            tools:ignore="MissingConstraints" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_charge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_large"
+        android:text="@string/charge"/>
+</LinearLayout>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activities.map.SearchPlacesActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="3dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimaryDark">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_normal"
+                        >
+                        <LinearLayout
+                            android:id="@+id/search_lay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/white"
+                            >
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_outline_search_24"
+                                android:padding="@dimen/padding_med"
+                                android:tint="@android:color/darker_gray"
+                                />
+                            <EditText
+                                android:id="@+id/et_search"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/margin_large"
+                                android:gravity="left"
+                                android:imeOptions="actionSearch"
+                                android:hint="@string/search_st"
+                                android:padding="@dimen/padding_ab_med"
+                                android:backgroundTint="@android:color/white"
+                                android:fontFamily="@font/jf_flat_semi"
+                                android:textSize="@dimen/textsize2"
+                                />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="@dimen/margin_large"
+                        android:layout_marginBottom="@dimen/margin_large"
+                        android:layout_marginLeft="56dp"
+                        android:visibility="gone"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:background="@drawable/shape_rect"
+                        android:padding="56dp"
+
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+                            <fragment
+                                android:id="@+id/autocomplete_fragment"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+                                />
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+                </FrameLayout>
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout
+        android:id="@+id/progress_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:orientation="vertical"
+        >
+        <com.pnikosis.materialishprogress.ProgressWheel
+            android:id="@+id/progress_wheel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:matProg_barColor="@color/colorAccent"
+            app:matProg_barWidth="4dp"
+            app:matProg_progressIndeterminate="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/empty_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/place_holder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/no_search_res"
+            android:textSize="@dimen/textsize2"
+            android:textColor="@color/colorAccent"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/error_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/no_connection"
+            android:layout_gravity="center"
+            android:tint="@color/errorColor"
+            />
+        <TextView
+            android:id="@+id/error_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/error_connection"
+            android:textSize="@dimen/textsize2"
+            android:textColor="@color/errorColor"
+            />
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/progress_search"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="invisible"
+        android:indeterminateTint="@color/colorAccent"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/rec_near_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rec_nears"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/margin_large"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_weight="1"
+            />
+        <ProgressBar
+            android:id="@+id/load_progress"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="invisible"
+            android:indeterminateTint="@color/colorAccent"
+            />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

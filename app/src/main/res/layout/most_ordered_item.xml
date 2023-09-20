@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:padding="@dimen/padding_med"
+
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageView
+            android:id="@+id/loc_img"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="@dimen/margin_normal"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/location_pointer_place"
+            app:layout_editor_absoluteY="6dp"
+            android:tint="@color/colorAccent"
+            android:layout_margin="@dimen/margin_normal"
+            tools:ignore="MissingConstraints" />
+
+
+
+
+    <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:maxLines="2"
+            android:textSize="@dimen/textsize3"
+            android:ellipsize="end"
+            android:textColor="@color/black"
+            android:gravity="right"
+            app:layout_constraintStart_toEndOf="@id/loc_img"
+             />
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            android:layout_marginRight="@dimen/margin_normal"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_large"
+            />
+</androidx.constraintlayout.widget.ConstraintLayout>

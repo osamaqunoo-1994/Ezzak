@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activities.menu.ShareActivity">
+
+    <include layout="@layout/toolbar_normal" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/margin_large"
+        android:src="@mipmap/gift"
+        android:tint="@android:color/black" />
+
+    <TextView
+        android:id="@+id/obtain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:layout_marginRight="@dimen/margin_large"
+        android:fontFamily="@font/jf_flat_bold"
+        android:gravity="center"
+        android:text="@string/price_invite"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/obtain_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_large"
+        android:lineSpacingExtra="5dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/jf_flat_bold"
+        android:gravity="center"
+        android:text="@string/obtain_price" />
+
+    <TextView
+        android:id="@+id/share_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginRight="@dimen/margin_large"
+        android:fontFamily="@font/jf_flat_light"
+        android:gravity="center"
+        android:text="@string/share_invite_msg"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/textsize1" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginBottom="@dimen/margin_large">
+
+        <EditText
+            android:id="@+id/code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/invitation_drawable"
+            android:editable="false"
+            android:fontFamily="@font/jf_flat_semi"
+            android:padding="@dimen/padding_med"
+            android:textSize="@dimen/textsize2" />
+
+        <EditText
+            android:id="@+id/save_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/invitation_drawable"
+            android:clickable="true"
+            android:focusable="false"
+            android:fontFamily="@font/jf_flat_semi"
+            android:padding="@dimen/padding_med"
+            android:text="@string/copy"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/textsize2"
+
+
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginRight="@dimen/margin_large"
+        android:fontFamily="@font/jf_flat_light"
+        android:gravity="center"
+        android:text="@string/share_invite_msg"
+        android:textSize="@dimen/textsize1" />
+
+    <LinearLayout
+        android:id="@+id/share_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_large"
+        android:background="@drawable/invitation_drawable"
+
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/share_menu" />
+
+        <TextView
+            android:id="@+id/more_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_large"
+            android:fontFamily="@font/jf_flat_semi"
+
+            android:gravity="center"
+            android:text="@string/share"
+            android:textSize="@dimen/textsize2"
+
+            />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:padding="@dimen/padding_med"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageView
+            android:id="@+id/loc_img"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="@dimen/margin_normal"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/location_pointer_place"
+            app:layout_editor_absoluteY="6dp"
+
+            android:layout_margin="@dimen/margin_normal"
+            tools:ignore="MissingConstraints" />
+
+    <TextView
+            android:id="@+id/period_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/jf_flat_bold"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:gravity="left"
+            android:textSize="@dimen/textsize3"
+            app:layout_editor_absoluteX="@dimen/margin_normal"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintEnd_toStartOf="@id/title"
+            app:layout_constraintEnd_toEndOf="@id/loc_img"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/loc_img" />
+
+    <TextView
+            android:id="@+id/header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jf_flat_bold"
+            app:layout_constraintEnd_toStartOf="@id/star"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginLeft="@dimen/margin_small"
+            app:layout_constraintStart_toEndOf="@id/loc_img"
+            android:maxLines="1"
+            android:textSize="@dimen/textsize2"
+            app:layout_editor_absoluteY="@dimen/margin_small"
+            android:gravity="left"
+            android:ellipsize="end"
+            tools:ignore="MissingConstraints" />
+
+    <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginLeft="@dimen/margin_small"
+            app:layout_constraintEnd_toStartOf="@id/star"
+            android:fontFamily="@font/jf_flat_bold"
+
+            android:maxLines="1"
+            android:textSize="@dimen/textsize3"
+            android:ellipsize="end"
+            android:textColor="@color/colorAccent"
+            android:gravity="left"
+            app:layout_constraintStart_toEndOf="@id/period_txt"
+            app:layout_constraintTop_toBottomOf="@id/loc_img" />
+<ImageView
+        android:id="@+id/star"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/star"
+        app:layout_constraintTop_toTopOf="@id/loc_img"
+        app:layout_constraintBottom_toBottomOf="@+id/title"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="@dimen/padding_med"
+        />
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintTop_toBottomOf="@id/period_txt"
+            android:layout_marginRight="@dimen/margin_normal"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_large"
+            />
+</androidx.constraintlayout.widget.ConstraintLayout>

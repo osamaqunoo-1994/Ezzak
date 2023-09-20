@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/picker_launch_time"
+        android:fontFamily="@font/jf_flat_bold"
+        android:textColor="@android:color/black"
+        android:padding="@dimen/padding_med"
+        android:textSize="@dimen/textsize1"
+        android:layout_margin="@dimen/margin_normal"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_normal"
+        >
+        <NumberPicker
+            android:id="@+id/date_picker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            />
+        <TimePicker
+            android:id="@+id/time_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:timePickerMode="spinner"
+
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/reserve_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_normal"
+        android:text="@string/reserve_ride"
+        android:textColor="@color/main_text_color"
+        />
+</LinearLayout>

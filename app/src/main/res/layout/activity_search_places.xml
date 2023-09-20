@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activities.map.SearchPlacesActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="3dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimaryDark">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="56dp"
+                        android:layout_marginTop="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_marginBottom="@dimen/margin_large"
+                        android:background="@drawable/shape_rect"
+                        android:padding="56dp"
+
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <fragment
+                                android:id="@+id/autocomplete_fragment"
+                                android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center" />
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+                </FrameLayout>
+                EditText
+                android:id="@+id/search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_rect"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/padding_med"
+                android:hint="@string/search_place"
+                android:fontFamily="@font/jf_flat_semi"
+                android:textSize="@dimen/textsize2"
+                android:layout_margin="@dimen/margin_normal"
+                android:inputType="text"
+                />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/search_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.pnikosis.materialishprogress.ProgressWheel
+            android:id="@+id/progress_wheel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:matProg_barColor="@color/colorAccent"
+            app:matProg_barWidth="4dp"
+            app:matProg_progressIndeterminate="true" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rec_search_results"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/place_holder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/no_search_res"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/textsize2" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    <LinearLayout
+          android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+    <TextView
+        android:id="@+id/tv_most_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:layout_marginRight="@dimen/margin_large"
+        android:text="@string/places_most_orderd"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/rv_most_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_large"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/most_ordered_item" />
+
+    <TextView
+        android:id="@+id/saved_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:layout_marginRight="@dimen/margin_large"
+        android:text="@string/saved_places" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rec_saved"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_large"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/near_by_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:layout_marginRight="@dimen/margin_large"
+        android:text="@string/nearest_by_places" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rec_nears"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_large"
+        android:layout_weight="1" />
+
+
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

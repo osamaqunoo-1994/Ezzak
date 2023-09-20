@@ -1,0 +1,442 @@
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+    >
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+    >
+
+
+
+    <include
+        layout="@layout/to_from_card"
+        android:layout_below="@id/app_bar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:layout_marginStart="@dimen/margin_normal"
+
+        />
+<include
+    layout="@layout/from_to_card"
+    android:layout_below="@id/app_bar"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_margin="@dimen/margin_normal"
+    />
+
+
+    <fragment
+        android:id="@+id/mapView"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/img_lay"
+        android:layout_centerInParent="true"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/src"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_centerInParent="true"
+            android:contentDescription="@null"
+            android:src="@mipmap/green_marker_active"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:id="@+id/period"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible"
+            tools:layout_editor_absoluteY="6dp">
+
+            <TextView
+                android:id="@+id/period_txt_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="1"
+                android:fontFamily="@font/jf_flat_semi"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/textsize3"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/jf_flat_semi"
+                android:textSize="@dimen/textsize3"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="@string/mins" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/load_prog"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="@dimen/margin_normal"
+            android:indeterminate="true"
+            app:layout_constraintRight_toRightOf="@id/src"
+            app:layout_constraintLeft_toLeftOf="@id/src"
+            android:visibility="gone"
+            tools:ignore="MissingConstraints" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/dist"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_above="@id/point"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@null"
+        android:visibility="invisible"
+
+        android:src="@mipmap/green_marker_empty"
+        />
+    <ImageView
+        android:id="@+id/point"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_below="@id/img_lay"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@null"
+        android:visibility="invisible"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:src="@mipmap/map_circle"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginBottom="5dp"
+            app:cardCornerRadius="4dp">
+
+            <ImageView
+                android:id="@+id/iv_satellite"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:padding="@dimen/padding_med"
+                android:src="@drawable/satellite"
+                app:cornerRadius="18dp"
+                app:tint="@color/black" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/margin_medium"
+            app:cardCornerRadius="4dp">
+
+            <ImageView
+                android:id="@+id/iv_traffic"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:padding="@dimen/padding_med"
+                android:src="@drawable/traffic_lights"
+                app:cornerRadius="18dp"
+                app:tint="@color/black" />
+        </androidx.cardview.widget.CardView>
+
+        <include
+            android:id="@+id/price_card"
+            layout="@layout/price_plan"
+            android:visibility="gone" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/food_btn"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginRight="@dimen/margin_normal"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorAccent"
+            android:fontFamily="@font/jf_flat_semi"
+            android:gravity="center"
+            android:text="@string/order_food"
+            android:textColor="@color/main_text_color"
+            android:textSize="@dimen/textsize3"
+            android:visibility="gone"
+            app:cornerRadius="4dp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/car_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_normal"
+            android:backgroundTint="@android:color/white"
+            android:clickable="true"
+            android:fontFamily="@font/jf_flat_semi"
+            android:stateListAnimator="@anim/animation"
+            android:text="@string/next"
+
+            android:textSize="@dimen/textsize3"
+            app:cornerRadius="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+
+                <LinearLayout
+                    android:id="@+id/cars_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_med"
+                    android:visibility="gone">
+
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:id="@+id/shimmer_car"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:shimmer_repeat_delay="@integer/default_minValue"
+
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:background="@color/colorShimmer" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/margin_normal"
+                                android:layout_marginRight="@dimen/margin_normal"
+                                android:background="@color/colorShimmer" />
+                        </LinearLayout>
+                    </com.facebook.shimmer.ShimmerFrameLayout>
+
+                    <LinearLayout
+                        android:id="@+id/car_lay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/car"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp" />
+
+                        <TextView
+                            android:id="@+id/car_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_normal"
+                            android:layout_marginRight="@dimen/margin_normal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|end"
+                        android:orientation="horizontal">
+
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:id="@+id/shimmer_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            app:shimmer_repeat_delay="@integer/default_minValue"
+
+                            >
+
+                            <TextView
+                                android:layout_width="20dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/margin_normal"
+                                android:layout_marginRight="@dimen/margin_normal"
+                                android:background="@color/colorShimmer"
+                                android:gravity="center_vertical" />
+                        </com.facebook.shimmer.ShimmerFrameLayout>
+
+                        <TextView
+                            android:id="@+id/time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_normal"
+                            android:layout_marginRight="@dimen/margin_normal"
+                            android:gravity="center_vertical" />
+
+                        <ImageView
+                            android:id="@+id/arrow_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/padding_med"
+                            android:src="@drawable/arrow" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:layout_marginBottom="@dimen/margin_large"
+                android:gravity="center_vertical">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/next_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/jf_flat_semi"
+                    android:gravity="center"
+                    android:text="@string/next"
+                    android:textColor="@color/main_text_color"
+                    android:textSize="@dimen/textsize3"
+                    app:cornerRadius="4dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    app:cardCornerRadius="4dp"
+
+                    >
+
+                    <ImageView
+                        android:id="@+id/calendar"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/padding_med"
+                        android:src="@drawable/event"
+                        app:cornerRadius="18dp"
+                        app:tint="@color/colorAccent" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    app:cardCornerRadius="4dp"
+
+                    >
+
+                    <TextView
+                        android:id="@+id/skip_btn"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:padding="@dimen/padding_med"
+                        android:text="@string/skip"
+                        android:textColor="@color/colorAccent"
+                        android:visibility="gone"
+                        app:cornerRadius="18dp"
+
+                        />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:id="@+id/app_bar"
+
+
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/menu_iv"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/padding_med"
+                    android:src="@drawable/menu_ezzak"
+                    app:tint="@android:color/black" />
+
+                <TextView
+                    android:fontFamily="@font/jf_flat_semi"
+                    android:id="@+id/tv_toolbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:layout_toEndOf="@id/menu_iv"
+                    android:text="@string/detect_start_point"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize2" />
+
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </LinearLayout>
+</RelativeLayout>
+    <FrameLayout
+        android:id="@+id/nav_view"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start" />
+</androidx.drawerlayout.widget.DrawerLayout>

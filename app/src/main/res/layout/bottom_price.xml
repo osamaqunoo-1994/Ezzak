@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/margin_normal"
+            android:gravity="center"
+            >
+    <TextView
+            android:id="@+id/msg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/try_other_price"
+            android:fontFamily="@font/jf_flat_bold"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/textsize2"
+            android:layout_weight="1"
+
+            />
+    <ImageView
+            android:id="@+id/close_price_plan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/close"
+            android:padding="@dimen/padding_med"
+
+            />
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <RadioGroup
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:orientation="vertical">
+
+        <RadioButton
+                android:id="@+id/offer_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jf_flat_semi"
+                android:text="@string/allow_offer"
+                android:textSize="@dimen/textsize2"
+                />
+
+    <RadioButton
+            android:id="@+id/share_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jf_flat_semi"
+            android:text="@string/allow_share"
+            android:textSize="@dimen/textsize2"
+            />
+
+
+
+    </RadioGroup>
+
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:orientation="vertical">
+        <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:fontFamily="@font/jf_flat_semi"
+                android:text="@string/allow_share"
+                android:textSize="@dimen/textsize2"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                />
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:fontFamily="@font/jf_flat_semi"
+                android:text="@string/hint_price_share"
+                android:layout_weight="1"
+                android:gravity="center_vertical|bottom"
+                android:layout_margin="@dimen/margin_small"
+                android:textSize="@dimen/textsize3"
+
+                />
+    </LinearLayout>
+    </LinearLayout>
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/next_price_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/next"
+            android:layout_weight="1"
+            app:cornerRadius="@dimen/margin_large"
+            android:layout_margin="@dimen/margin_normal"
+            android:fontFamily="@font/jf_flat_semi"
+        android:textColor="@color/main_text_color"
+        />
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/skip_price_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="@string/skip"
+            app:cornerRadius="@dimen/margin_large"
+            android:layout_margin="@dimen/margin_normal"
+            android:backgroundTint="@color/colorPrimary"
+            android:fontFamily="@font/jf_flat_semi"
+        android:textColor="@color/main_text_color"
+        />
+</LinearLayout>
+</LinearLayout>

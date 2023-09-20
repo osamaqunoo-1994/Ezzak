@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "129368207484",
+    "firebase_url": "https://ezzak-255109.firebaseio.com",
+    "project_id": "ezzak-255109",
+    "storage_bucket": "ezzak-255109.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:129368207484:android:b08dda0e86765bc2df59f9",
+        "android_client_info": {
+          "package_name": "com.aait.ezakbus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "129368207484-9rkjevjrmlf99fou5701e3cbnhb98aoq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aait.ezakbus",
+            "certificate_hash": "81db7948fabc495ad5763114bb0d00b819749558"
+          }
+        },
+        {
+          "client_id": "129368207484-rvalnfl93nsg9oi6i3dvrougdcn6j263.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aait.ezakbus",
+            "certificate_hash": "15eae93f663b9e47af9dbea3e6dc27fbcb6b9ec8"
+          }
+        },
+        {
+          "client_id": "129368207484-qmmtrh76vhnn9ik05c3k1oebbdd16pjd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqwoCLDo0VSMLTmlYL13YsYwaO4K5tC0I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "129368207484-qmmtrh76vhnn9ik05c3k1oebbdd16pjd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "129368207484-9phe5fo2if6du8jsqr8tr5v0gbkk5qes.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.aait.EzzkProvider"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:129368207484:android:58a43ab3ceca92a8df59f9",
+        "android_client_info": {
+          "package_name": "com.aait.ezzkcaptain"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "129368207484-qmmtrh76vhnn9ik05c3k1oebbdd16pjd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqwoCLDo0VSMLTmlYL13YsYwaO4K5tC0I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "129368207484-qmmtrh76vhnn9ik05c3k1oebbdd16pjd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "129368207484-9phe5fo2if6du8jsqr8tr5v0gbkk5qes.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.aait.EzzkProvider"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

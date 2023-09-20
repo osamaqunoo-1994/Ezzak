@@ -1,0 +1,121 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="3dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimaryDark">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:fontFamily="@font/jf_flat_semi"
+                    android:id="@+id/tv_ditected_succ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:text="@string/choose_your_location"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textsize2" />
+
+                <TextView
+                    android:fontFamily="@font/jf_flat_semi"
+                    android:id="@+id/btn_approve_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/accept"
+                    android:gravity="center"
+                    android:padding="@dimen/padding_med"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize2" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="@dimen/margin_large"
+        android:padding="@dimen/padding_ab_med"
+        android:layout_below="@+id/app_bar"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <fragment
+                android:id="@+id/place_autocomplete_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+                />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <fragment
+        android:id="@+id/mapView"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <ImageView
+        android:id="@+id/pin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:contentDescription="@null"
+        android:visibility="gone"
+        android:src="@mipmap/green_marker_active"
+
+        />
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi"
+        style="@style/AVLoadingIndicatorView"
+        android:layout_width="60dp"
+        android:visibility="gone"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        app:indicatorColor="@color/colorAccent"
+        app:indicatorName="BallClipRotatePulseIndicator"
+        />
+    <TextView
+        android:fontFamily="@font/jf_flat_semi"
+        android:id="@+id/tv_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="2"
+        android:layout_alignParentBottom="true"
+        android:gravity="start"
+        android:textAlignment="center"
+        android:textSize="@dimen/textsize3"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/white"
+        />
+
+</RelativeLayout>

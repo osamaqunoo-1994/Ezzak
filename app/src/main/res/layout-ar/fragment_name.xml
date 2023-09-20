@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myCoordinatorLayout"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@mipmap/intro_bg"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:orientation="vertical"
+                android:background="@android:color/white"
+
+                >
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/skip_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/skip"
+                    android:background="@android:color/darker_gray"
+                    android:layout_margin="@dimen/margin_large"
+                    android:visibility="invisible"
+                    android:layout_gravity="left"
+                    android:backgroundTint="@android:color/darker_gray"
+                    app:cornerRadius="16dp"
+                    />
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:src="@mipmap/logo"
+                    android:layout_gravity="center"
+
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin_large"
+
+                >
+                <TextView android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:layout_marginRight="@dimen/margin_large"
+                    android:fontFamily="@font/jf_flat_bold"
+                    android:textSize="@dimen/textsize1"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorAccent"
+                    />
+                <TextView android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/enter_your_name"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:gravity="center"
+                    android:layout_marginRight="@dimen/margin_large"
+                    android:fontFamily="@font/jf_flat_semi"
+
+                    />
+
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.Design.TextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginTop="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_marginBottom="@dimen/margin_normal"
+                        app:passwordToggleContentDescription="show"
+                        app:hintAnimationEnabled="false"
+                        app:hintEnabled="false"
+                        app:boxBackgroundMode="none"
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etFName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/jf_flat_semi"
+                            android:gravity="right|center_vertical"
+                            android:inputType="text"
+                            android:background="@drawable/shape_rect"
+                            android:padding="@dimen/padding_ab_med"
+                            android:textSize="@dimen/textsize2"
+                            android:hint="@string/first_name"
+                            tools:ignore="MissingConstraints" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    ImageView
+                    android:id="@+id/clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/close"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="-40dp"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    tools:ignore="MissingConstraints"/>
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Design.TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:layout_marginRight="@dimen/margin_large"
+                    android:layout_marginBottom="@dimen/margin_normal"
+                    app:passwordToggleContentDescription="show"
+                    app:hintAnimationEnabled="false"
+                    app:hintEnabled="false"
+                    app:boxBackgroundMode="none"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etLName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/jf_flat_semi"
+                        android:gravity="right|center_vertical"
+                        android:inputType="text"
+                        android:background="@drawable/shape_rect"
+                        android:padding="@dimen/padding_ab_med"
+                        android:textSize="@dimen/textsize2"
+                        android:hint="@string/last_name"
+                        tools:ignore="MissingConstraints" />
+                </com.google.android.material.textfield.TextInputLayout>
+                TextView
+                android:id="@+id/error_txt_mail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/margin_large"
+                android:layout_marginLeft="@dimen/margin_large"
+                android:drawableEnd="@android:drawable/stat_notify_error"
+                android:drawableTint="@android:color/holo_red_dark"
+                android:textColor="@android:color/holo_red_dark"
+                android:visibility="gone"
+
+                />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+        <LinearLayout
+            android:id="@+id/terms_lay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/continue_btn"
+            android:layout_marginBottom="@dimen/margin_large"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/margin_large"
+            >
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/check_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/agree_terms"
+                android:fontFamily="@font/jf_flat_semi"
+                android:checked="true"
+
+                />
+            <TextView
+                android:id="@+id/term"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/check_terms"
+                android:textSize="@dimen/textsize1"
+                android:visibility="gone"
+                android:fontFamily="@font/jf_flat_semi"
+                android:text="@string/agree_terms"
+                app:layout_constraintTop_toTopOf="@+id/check_terms"
+                />
+
+            <TextView
+                android:id="@+id/terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/term"
+                android:textSize="@dimen/textsize2"
+                android:padding="@dimen/padding_med"
+                android:fontFamily="@font/jf_flat_semi"
+                android:textColor="@color/colorAccent"
+                android:text="@string/terms"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="@+id/check_terms"
+                />
+        </LinearLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/continue_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_large"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_large"
+            android:fontFamily="@font/jf_flat_semi"
+            android:text="@string/cont"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textColor="@color/main_text_color"
+
+            />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

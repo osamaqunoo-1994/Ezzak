@@ -1,0 +1,62 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textViewStyle">@style/cairo_textView_style</item>
+        <item name="android:editTextStyle">@style/cairo_edit_style</item>
+        <item name="materialButtonStyle">@style/cairo_btn_style</item>
+        <!--<item name="textInputStyle">@style/cairo_edit_material_style</item>-->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <item name="android:windowActivityTransitions" tools:targetApi="lollipop">true</item>
+        <item name="android:windowContentTransitions">true</item>
+
+        <item name="android:forceDarkAllowed">false</item>
+
+    </style>
+
+    <style name="AppTheme.Custom" parent="MD_ListItem_Control">
+        <item name="md_corner_radius">16dp</item>
+        <item name="textSize">@dimen/textsize3</item>
+        <item name="md_color_title">@android:color/black</item>
+        <item name="md_color_content">@android:color/darker_gray</item>
+        <item name="md_color_button_text">@color/colorAccent</item>
+        <item name="md_font_title">@font/jf_flat_semi</item>
+        <item name="md_font_body">@font/jf_flat_semi</item>
+        <item name="md_font_button">@font/jf_flat_semi</item>
+
+    </style>
+
+    <style name="cairo_textView_style" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/jf_flat_semi</item>
+    </style>
+    <!--<style name="btn_style" parent="Widget.MaterialComponents.Button">
+        <item name="android:fontFamily">@font/jf_flat_light</item>
+        <item name="android:backgroundTint">@color/colorAccent</item>
+        <item name="android:textSize">@dimen/textsize2</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>-->
+    <style name="cairo_edit_style" parent="Widget.AppCompat.EditText">
+        <item name="android:fontFamily">@font/jf_flat_semi</item>
+
+    </style>
+    <!--<style name="cairo_edit_material_style" parent="Base.Widget.MaterialComponents.TextInputEditText">
+        <item name="android:fontFamily">@font/jf_flat_semi</item>
+        <item name="android:textSize">@dimen/textsize2</item>
+    </style>-->
+    <style name="cairo_btn_style" parent="Widget.MaterialComponents.Button">
+        <item name="android:fontFamily">@font/jf_flat_semi</item>
+        <item name="android:backgroundTint">@color/colorPrimaryDark</item>
+        <item name="android:textColor">@color/main_text_color</item>
+        <item name="android:textSize">@dimen/textsize2</item>
+        <item name="cardCornerRadius">4dp</item>
+
+    </style>
+
+</resources>

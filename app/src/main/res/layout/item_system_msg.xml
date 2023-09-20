@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/notif_lay"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/iv_logo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="@dimen/padding_med"
+            android:layout_gravity="center_vertical"
+            />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jf_flat_semi"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:layout_weight="1"
+            android:autoLink="web"
+            android:textAlignment="viewStart"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginRight="@dimen/margin_normal"
+            android:layout_marginBottom="@dimen/margin_normal"
+            />
+        <ImageView
+            android:id="@+id/iv_remove"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="@dimen/padding_med"
+            android:src="@drawable/error_intro"
+            android:layout_gravity="center_vertical"
+            />
+    </LinearLayout>
+    <View
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/ef_grey"/>
+</LinearLayout>

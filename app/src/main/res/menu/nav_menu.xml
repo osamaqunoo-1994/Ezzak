@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+>
+    <item
+            android:id="@+id/home"
+            android:icon="@drawable/home_bnv"
+            app:showAsAction="ifRoom"
+            android:iconTint="@color/green_bg"
+            android:title="@string/home" />
+
+
+
+    <item
+            android:id="@+id/wallet"
+            android:icon="@drawable/wallet"
+            app:showAsAction="ifRoom"
+
+            android:title="@string/my_wallet" />
+
+    <item
+            android:id="@+id/points"
+            android:icon="@drawable/points"
+            app:showAsAction="ifRoom"
+            
+            android:title="@string/my_points" />
+
+
+    <item
+            android:id="@+id/records"
+            android:icon="@drawable/records"
+            app:showAsAction="ifRoom"
+            
+            android:title="@string/records" />
+    <item
+            android:id="@+id/notif"
+            android:icon="@drawable/notification"
+            app:showAsAction="ifRoom"
+
+            android:title="@string/notifications" />
+
+
+</menu>

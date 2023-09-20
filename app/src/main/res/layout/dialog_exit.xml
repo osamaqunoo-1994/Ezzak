@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:layout_marginRight="@dimen/margin_normal"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:padding="@dimen/padding_med"
+        >
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:padding="@dimen/padding_med"
+            >
+        <TextView
+                android:id="@+id/body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="@dimen/textsize2"
+                android:paddingRight="@dimen/padding_med"
+                android:paddingLeft="@dimen/padding_med"
+                android:text="@string/logout_msg"
+                android:textColor="@android:color/black"
+                />
+
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/margin_normal"
+                android:layout_gravity="end"
+
+                >
+            <TextView
+                    android:id="@+id/ok_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/confirm"
+                    android:textColor="@color/colorAccent"
+                    android:padding="@dimen/padding_med"
+                    />
+            <TextView
+                    android:id="@+id/cancel_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cancel"
+                    android:padding="@dimen/padding_med"
+                    />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

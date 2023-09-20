@@ -1,0 +1,355 @@
+<resources>
+    <string name="app_name">Ezzak</string>
+    <string name="yes">yes</string>
+    <string name="no">no</string>
+    <string name="cancel">cancel</string>
+    <string name="continues">continue</string>
+    <string name="error_url_address">error</string>
+    <string name="time_out_error">time out error</string>
+    <string name="connection_error">connection error</string>
+    <string name="package_installed">package not installed</string>
+    <string name="check_phone">check phone</string>
+    <string name="check_mail">check mail</string>
+    <string name="error_video">error video</string>
+    <string name="check_error">check error</string>
+    <string name="check_pass">the password at least 6 characters</string>
+    <string name="error_match">error match</string>
+    <string name="copied">copied</string>
+    <string name="user_name">name</string>
+    <string name="password">password</string>
+    <string name="forget_pass">forget password</string>
+    <string name="dont_have_account">dont have account ?</string>
+    <string name="phone">phone</string>
+    <string name="confirm_password">confirm password</string>
+    <string name="register">register</string>
+    <string name="terms">terms and conditions</string>
+    <string name="send">send</string>
+    <string name="confirm">confirm</string>
+    <string name="accept">accept</string>
+    <string name="error_connection">error connection</string>
+    <string name="reload">reload</string>
+    <string name="no_item">sorry no items</string>
+    <string name="from">from</string>
+    <string name="to">to</string>
+    <string name="address">address :\u0020</string>
+    <string name="notifications">notifications</string>
+    <string name="edit">edit</string>
+    <string name="ok">ok</string>
+    <string name="gps_msg">please open GPS to detect location</string>
+    <string name="alert">alert</string>
+    <string name="main">main</string>
+    <string name="contact_us">contact us</string>
+    <string name="settings">settings</string>
+    <string name="logout">logout</string>
+    <string name="logout_msg">are you sure you want logout ?</string>
+    <string name="language">language</string>
+    <string name="arabic">العربية</string>
+    <string name="english">english</string>
+
+    <string name="save">save</string>
+    <string name="confirm_new_password">confirm new password</string>
+    <string name="current_password">current password</string>
+    <string name="new_password">new password</string>
+    <string name="home">home</string>
+    <string name="km">KM</string>
+    <string name="details">details</string>
+    <string name="no_search_res">no search result found</string>
+    <string name="order_now">order now</string>
+    <string name="out_doors">outdoors</string>
+    <string name="time">time</string>
+    <string name="my_orders">my orders</string>
+    <string name="choose_your_location">choose your location</string>
+    <string name="resend_code">resend activation code</string>
+    <string name="skip">skip</string>
+    <string name="next">next</string>
+    <string name="previous">previous</string>
+    <string name="share">share</string>
+    <string name="app_language">app language</string>
+    <string name="updated_successfully">data updated successfully</string>
+    <string name="change_pass">change password</string>
+    <string name="back_home">back to main</string>
+    <string name="sure">are you sure to sign out the stored data will clear ?</string>
+    <string name="empty_field">empty title message</string>
+    <string name="cont">continue</string>
+    <string name="new_account">create new account</string>
+    <string name="welcome_back">welcome back login to complete</string>
+    <string name="bills_msg">to receive your bills and latest displays</string>
+    <string name="enter_phone_msg">type phone number</string>
+    <string name="enter_your_phone">enter your phone to complete register and login</string>
+    <string name="enter_mail_msg">enter your e-mail</string>
+    <string name="mail">e-mail</string>
+    <string name="first_name">first name</string>
+    <string name="last_name">last name</string>
+    <string name="agree_terms">agree on</string>
+    <string name="enter_pass_msg">create your password</string>
+    <string name="pass_msg">at least 6 characters at password</string>
+    <string name="enter_verif_msg">enter your verification code</string>
+    <string name="recieve_msg">you will receive sms with verification code to your number</string>
+    <string name="forgot_password">forgot your password ?</string>
+    <string name="just_phone">just enter your phone and you will receive verification code</string>
+    <string name="recieve_msg_sent">you received sms with 4 digits verification code please verify it</string>
+    <string name="enter_new_pass">enter your new password</string>
+    <string name="edit_number">edit phone</string>
+    <string name="accept_terms">you should accept terms</string>
+    <string name="user_not_active">the user is not active</string>
+    <string name="error_phone">sorry the phone format not correct</string>
+    <string name="wallet">wallet</string>
+    <string name="my_wallet">my wallet</string>
+    <string name="my_points">my points</string>
+    <string name="indoors">indoors</string>
+    <string name="trip">trip</string>
+    <string name="package_">package</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="records">records</string>
+    <string name="current_payments">current payment methods</string>
+    <string name="add_credit">add credit card</string>
+    <string name="charge">charge</string>
+    <string name="credit">credit card</string>
+    <string name="copuon">copun</string>
+    <string name="balance">the balance</string>
+    <string name="use_mycharge"> <![CDATA[
+         use my balance first <b><font color=#2CB673>(%s)</font></b>
+    ]]></string>
+    <string name="your_points">your points</string>
+    <string name="you_can_use">you can exchange these points into charge in your wallet and use it in your trips in app</string>
+    <string name="no_previous_trips">no previous trips</string>
+    <string name="mins">mins</string>
+    <string name="date_time">date</string>
+    <string name="notes">notes</string>
+    <string name="nearest_by_places">nearest places</string>
+    <string name="saved_places">saved places</string>
+    <string name="meter">m</string>
+    <string name="enter_name">enter place name (Home/Work...etc)</string>
+    <string name="place_details">place details</string>
+    <string name="unsave_remove">remove place</string>
+    <string name="confirm_delete">you will remove this place from favorites</string>
+    <string name="cash">cash</string>
+    <string name="offers">offers</string>
+    <string name="promo_code">+promo code</string>
+    <string name="try_other_price">try other way of price more cheaply (optional)</string>
+    <string name="allow_offer">allow offer price</string>
+
+    <string name="allow_share">allow share trip<!--<![CDATA[allow share trip<b><font color=#d7d2ce size=12dp>(in case no passengers you will pay with normal price plan)</font></b>]]>--></string>
+
+
+    <string name="hint_price_share">(in case no passengers you will pay with normal price plan)</string>
+    <string name="persons">persons</string>
+    <string name="error_date_format">error date format</string>
+    <string name="error_time_format">error time format</string>
+    <string name="camera">camera</string>
+    <string name="gallery">gallery</string>
+    <string name="payment_options">payment options</string>
+    <string name="expected_price">expected price : </string>
+    <string name="expected_time">expected time : </string>
+    <string name="free_trips">free trips</string>
+    <string name="join_as_captin">join as captain</string>
+    <string name="my_trips">my trips</string>
+    <string name="join">join</string>
+    <string name="details_ride">details ride</string>
+    <string name="captin_rate">captain rate</string>
+    <string name="cancel_reason">cancel reason</string>
+    <string name="enter_value_charge">enter the charge value</string>
+    <string name="available_charge">
+
+
+    </string>
+    <string name="charge_value">charge value</string>
+    <string name="transfer_charge">transfer charge</string>
+    <string name="transfered_success">transfered successfully</string>
+    <string name="contact_ways">contact ways :</string>
+    <string name="contact_us_by_message">contact us by texting</string>
+    <string name="src_dist_point">you can detect the start point and the end point</string>
+    <string name="transport_operation">transport  measure</string>
+    <string name="operation_type">operation type</string>
+    <string name="start_journey">start your ride</string>
+    <string name="transport_package">you can transport ride or package</string>
+    <string name="choose_offer">choose your offer for cheaper way</string>
+    <string name="language_settings">language setting</string>
+    <string name="obtain_price">invite friends to obtain</string>
+
+    <string name="share_invite_msg">share invitaion code</string>
+    <string name="enter_invitation_code">enter invitaion code</string>
+    <string name="invite_friends">
+    </string>
+    <string name="price_invite"></string>
+
+    <string name="ezzak_welcome"></string>
+    <string name="activate">activate</string>
+    <string name="shipping_cupon">shipping cupon</string>
+    <string name="exchange">exchange</string>
+    <string name="ride_fare">ride fare</string>
+    <string name="starting">Starting</string>
+    <string name="moving">Moving</string>
+    <string name="waiting">Waiting</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="vat">VAT</string>
+    <string name="amount_charged">Amount charged</string>
+    <string name="distance_msg"> </string>
+    <string name="add_pocket"></string>
+    <string name="call_captin">call captain</string>
+    <string name="tracking_ride">tracking ride</string>
+    <string name="show_profile">show captain data</string>
+    <string name="hide_captin_data">hide captain data</string>
+    <string name="cost_ride">the totally ride cost</string>
+    <string name="pay_msg">you will pay with the selected payment way</string>
+    <string name="rate_captin">rate captain</string>
+    <string name="total_cost">total cost</string>
+    <string name="recieve_rides">i don\'t want deal with this captain again</string>
+    <string name="captin_price">captain price</string>
+    <string name="select">select</string>
+    <string name="no_bids_available">no available bids</string>
+    <string name="offer_accepted">offer accepted</string>
+    <string name="enter_phone_sent">enter receiver phone</string>
+    <string name="copy">copy</string>
+    <string name="rush_hour">rush hour</string>
+    <string name="option_trip">this option prefered to entirly rides</string>
+    <string name="search_for_driver">looking for captain</string>
+    <string name="continue_phone">continue using phone number</string>
+    <string name="join_cap">Join as captain</string>
+
+    <string name="continue_face">
+            <![CDATA[continue by <font color=#1977f2><b>facebook</b></font> ]]>
+    </string>
+    <string name="continue_face_btn">continue using facebook</string>
+    <string name="name">name</string>
+    <string name="enter_your_name">Enter your full name to recognize by captains</string>
+    <string name="error_mail_format">error mail format</string>
+    <string name="have_invation">have an invitation code ?</string>
+    <string name="fire">fire</string>
+    <string name="detect_start_point">detect start point</string>
+    <string name="where_to_go">where to go ?</string>
+    <string name="picker_launch_time">"pick launch time "</string>
+    <string name="reserve_ride">reserve your ride</string>
+    <string name="detect_destination">detect destination place</string>
+    <string name="yalla">yalla</string>
+    <string name="balance_value">balance value</string>
+    <string name="captain_in_way">captain in way</string>
+    <string name="ride_details">ride details</string>
+    <string name="booking_details">booking details</string>
+    <string name="code_sent">code sent successfully</string>
+    <string name="enter_details_address">enter address details</string>
+    <string name="enter_promo_code">enter promo code</string>
+    <string name="ride_review"><![CDATA[
+         how was your ride with captain %s ?
+    ]]></string>
+    <string name="your_journies">your journies</string>
+    <string name="help">help</string>
+    <string name="scheduled">scheduled</string>
+    <string name="call_support">call support</string>
+    <string name="cancel_reservation">cancel reservation</string>
+    <string name="current_charge">current charge</string>
+    <string name="what_your_gend">gender</string>
+    <string name="what_your_birth">what\'s your birth date ?</string>
+    <string name="rate_app">rate this app</string>
+    <string name="update_password">update your password</string>
+    <string name="facebook_app_id">228059324943217</string>
+    <string name="fb_login_protocol_scheme">fb228059324943217</string>
+    <string name="captain_accepted">captain accepted</string>
+    <string name="captain_arrived">captain arrived</string>
+    <string name="ride_started">ride started</string>
+    <string name="ride_end">ride ended</string>
+    <string name="search_captain">looking for near captains</string>
+    <string name="empty_address">empty address</string>
+    <string name="write_msg_hint">write your message ...</string>
+    <string name="chat">chat</string>
+    <string name="order_food">order food</string>
+    <string name="search_st">search</string>
+    <string name="what_want">write what do you need from captain </string>
+    <string name="dist_hint">destination</string>
+    <string name="retry">resend</string>
+    <string name="dear_client">dear client there is a lot of requests now try again to serve you</string>
+    <string name="charge_wallet">charge wallet</string>
+    <string name="elect_payment">electronic payment</string>
+    <string name="added_card_successfully">your card added successfully</string>
+    <string name="male">male</string>
+    <string name="female">female</string>
+    <string name="gender">gender</string>
+    <string name="captain_in_way_rest">captain in way to store</string>
+    <string name="captain_arrived_rest">captain arrived to store</string>
+    <string name="captain_recieved">captain received the order and in way</string>
+    <string name="captain_finished_rest">captain confirmed order arrival</string>
+    <string name="captain_accept_order">captain accepted order</string>
+    <string name="stc_payment">pay with stc</string>
+    <string name="do_not_disturb">do not disturb</string>
+    <string name="accept_condtion_and_terms">"Your use of this application signifies your agreement to"</string>
+    <string name="terms_and_conditions_highlight"> <u>Terms and Conditions</u></string>
+    <string name="places_most_orderd">Most Orderd</string>
+    <string name="sar">"SAR "</string>
+    <string name="share_trip">Share Trip</string>
+    <string name="discount">Discount</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="total_amount">Total Amount</string>
+    <string name="enter_amount">Enter Amount</string>
+    <string name="pay">Pay</string>
+    <string name="has_debt_from_previous">There are debts owed from previous trips</string>
+    <string name="pay_nxt_trip">Pay With Next Trip</string>
+    <!--
+    عزيزي العميل هنالك ضغط في الطلبات الرجاء المحاولة مرة اخرى لنتمكن من خدمتك
+    ![CDATA[
+    استخدم رصيدي أولاً  <b><font color=#2CB673>(%s)</font></b>
+    ]]-->
+
+
+
+    <string name="reg_title">Register as your Captin</string>
+    <string name="reg_name">Full Name</string>
+    <string name="reg_mobile">The mobile number registered in Absher</string>
+    <string name="reg_id">ID or residence number</string>
+    <string name="reg_male">Gender</string>
+    <string name="reg_email">E-mail</string>
+    <string name="reg_date_of_birth">date of birth</string>
+    <string name="reg_area">Region</string>
+    <string name="reg_code">Invitation code for your friend to get 5 SAR as a gift</string>
+    <string name="reg_code2">promotional code</string>
+    <string name="reg_gender_male">Male</string>
+    <string name="reg_gender_famel">Famale</string>
+
+
+    <string name="image_1">Adding the national ID or residence permit</string>
+    <string name="image_2">Add a drivers license</string>
+    <string name="image_3">Add car Form</string>
+    <string name="image_4">Add an IBAN account</string>
+    <string name="image_5">Add car insurance</string>
+    <string name="image_6">Add a profile picture</string>
+    <string name="NEXdt">Next</string>
+    <string name="image_7">Car Image</string>
+
+    <string name="number_phone">Number phone</string>
+
+
+
+    <string name="reg_car_type">Car Type</string>
+    <string name="reg_car_modal">Car Modal</string>
+    <string name="reg_car_color">Car Color</string>
+    <string name="reg_car_years">Year of manufacture</string>
+    <string name="reg_car_bord_number">Vehicle registration number</string>
+    <string name="reg_car_alph_borde">Letters on a car plate</string>
+    <string name="reg_car_number_bord">Numbers on the car plate</string>
+    <string name="reg_car_type_bord">Vehicle plate type</string>
+
+
+    <string name="required">Required</string>
+    <string name="requ_">يجب ان يكون 9 ارقام</string>
+    <string name="Newimage">select New Image </string>
+
+
+    <string name="a1">الرياض</string>
+    <string name="a2">عسير</string>
+    <string name="a3">الشرقية</string>
+    <string name="a4">جدة</string>
+    <string name="a5">حفر الباطن</string>
+    <string name="a6">محايل عسير</string>
+
+
+    <string name="registered_successfully">Your request has been sent successfully. The administration will contact you. Thank you.</string>
+    <string name="GoToLogin">Go To Login</string>
+    <string name="no_network_found_please_check_your_connection_and_try_again">No Network Found, Please Try Again</string>
+
+
+
+
+    <string name="ti_oo">Governmental fees</string>
+    <string name="ti_oo1">Value tax</string>
+
+</resources>
